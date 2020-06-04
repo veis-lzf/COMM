@@ -803,7 +803,7 @@ void CCOMMDlg::SetEditFont()
 	cf.cbSize = sizeof(CHARFORMAT);
 	cf.dwMask = CFM_COLOR | CFM_CHARSET | CFM_FACE | CFM_SIZE;
 	cf.dwEffects &= ~CFE_AUTOCOLOR;
-	strcpy(cf.szFaceName, _T("仿宋"));
+	strcpy(cf.szFaceName, _T("Microsoft YaHei UI"));
 	cf.yHeight = 250;
 	cf.bCharSet = ANSI_CHARSET;
 	cf.crTextColor = RGB(36, 60, 128);
@@ -811,10 +811,11 @@ void CCOMMDlg::SetEditFont()
 	m_Recv.SetDefaultCharFormat(cf);
 
 	/* 设置发送对话框字体 */
+	/*
 	LOGFONT lf = {16};
 	lf.lfCharSet = DEFAULT_CHARSET;
 	lf.lfWeight = FW_MEDIUM;
-	strcpy(lf.lfFaceName, _T("仿宋"));
+	strcpy(lf.lfFaceName, _T("Microsoft YaHei UI"));
 	CFont font;
 	font.CreateFontIndirect(&lf);
 	m_Send.SetFont(&font);
@@ -823,6 +824,7 @@ void CCOMMDlg::SetEditFont()
 	m_TxSize.SetFont(&font);
 	m_RxSize.SetFont(&font);
 	m_StatusCtl.SetFont(&font);
+	*/
 }
 
 // 加载并传输文件线程
