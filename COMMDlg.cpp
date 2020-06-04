@@ -357,6 +357,12 @@ void CCOMMDlg::OnOpen()
 	UpdateData();
 	CString szStatus;
 
+	if(m_ComNumb.GetCount() == 0)
+	{
+		AfxMessageBox(_T("没有搜索到有效串口号！"), MB_ICONERROR);
+		return;
+	}
+
 	if(m_Com.GetPortOpen())
 	{
 		m_Com.SetPortOpen(FALSE);
@@ -404,7 +410,6 @@ void CCOMMDlg::OnHexSend()
 		m_AsciiSend = FALSE;
 		m_SendVal = StrToHex(m_SendVal);
 	}
-
 	else
 	{
 		m_AsciiSend = TRUE;
@@ -423,7 +428,6 @@ void CCOMMDlg::OnAsciiSend()
 		m_HexSend = FALSE;
 		m_SendVal = HexToString(m_SendVal);
 	}
-
 	else
 	{
 		m_HexSend = TRUE;
@@ -442,7 +446,6 @@ void CCOMMDlg::OnHexRecv()
 		m_AsciiRecv = FALSE;
 		m_RecvVal = StrToHex(m_RecvVal);
 	}
-
 	else
 	{
 		m_AsciiRecv = TRUE;
@@ -461,7 +464,6 @@ void CCOMMDlg::OnAsciiRecv()
 		m_HexRecv = FALSE;
 		m_RecvVal = HexToString(m_RecvVal);
 	}
-
 	else
 	{
 		m_HexRecv = TRUE;
@@ -796,11 +798,12 @@ void CCOMMDlg::OnChangeSend() // 判断是否是十六进制输入
 void CCOMMDlg::SetEditFont()
 {
 	// 设置接收对话框字体
+
 	CHARFORMAT cf;
 	cf.cbSize = sizeof(CHARFORMAT);
 	cf.dwMask = CFM_COLOR | CFM_CHARSET | CFM_FACE | CFM_SIZE;
 	cf.dwEffects &= ~CFE_AUTOCOLOR;
-	strcpy(cf.szFaceName, _T("楷体"));
+	strcpy(cf.szFaceName, _T("仿宋"));
 	cf.yHeight = 250;
 	cf.bCharSet = ANSI_CHARSET;
 	cf.crTextColor = RGB(36, 60, 128);
@@ -809,14 +812,14 @@ void CCOMMDlg::SetEditFont()
 
 	/* 设置发送对话框字体 */
 	LOGFONT lf = {16};
-	lf.lfCharSet = ANSI_CHARSET;
+	lf.lfCharSet = DEFAULT_CHARSET;
 	lf.lfWeight = FW_MEDIUM;
 	strcpy(lf.lfFaceName, _T("仿宋"));
 	CFont font;
 	font.CreateFontIndirect(&lf);
 	m_Send.SetFont(&font);
 
-	lf.lfHeight = 8;
+	lf.lfHeight = 9;
 	m_TxSize.SetFont(&font);
 	m_RxSize.SetFont(&font);
 	m_StatusCtl.SetFont(&font);

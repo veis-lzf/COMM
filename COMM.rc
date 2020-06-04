@@ -167,17 +167,20 @@ VS_VERSION_INFO VERSIONINFO
 BEGIN
     BLOCK "StringFileInfo"
     BEGIN
-        BLOCK "080404B0"
+        BLOCK "080404b0"
         BEGIN
-            VALUE "CompanyName", "\0"
+            VALUE "Comments", "测试版本（beta）\0"
+            VALUE "CompanyName", "无\0"
             VALUE "FileDescription", "COMM Microsoft 基础类应用程序\0"
             VALUE "FileVersion", "1, 0, 0, 1\0"
             VALUE "InternalName", "COMM\0"
             VALUE "LegalCopyright", "版权所有 (C) 2020\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "COMM.EXE\0"
+            VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "COMM 应用程序\0"
             VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
         END
     END
     BLOCK "VarFileInfo"
