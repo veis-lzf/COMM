@@ -1,0 +1,313 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\COMM.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\COMM.ico"
+IDI_ICON2               ICON    DISCARDABLE     "res\\icon2.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_COMM_DIALOG DIALOGEX 0, 0, 676, 383
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_APPWINDOW
+CAPTION "COMM"
+FONT 9, "宋体"
+BEGIN
+    COMBOBOX        IDC_COMNUM,56,23,48,86,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_BOUND,56,46,48,89,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_STOPBIT,56,67,48,46,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_DATABIT,56,90,48,53,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CHECKBIT,56,113,48,44,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "HEX",IDC_HEX_RECV,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    28,140,28,10
+    CONTROL         "ASCII",IDC_ASCII_RECV,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,63,139,36,10
+    CONTROL         "打开串口",IDC_OPEN,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    35,156,50,14
+    PUSHBUTTON      "发送",IDC_SENDBTN,611,254,50,14
+    PUSHBUTTON      "清除发送",IDC_CLEARSEND,611,275,50,14
+    PUSHBUTTON      "清除接收",IDC_CLEARRECV,611,296,50,14
+    CONTROL         "HEX",IDC_HEX_SEND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,342,28,10
+    CONTROL         "ASCII",IDC_ASCII_SEND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,46,342,36,10
+    CONTROL         "发送新行",IDC_NEWLINE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,87,342,48,10
+    CONTROL         "黑底绿字",IDC_BKMODE_BLACK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,140,342,48,10
+    CONTROL         "自动换行",IDC_AUTOBREAK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,193,342,48,10
+    CONTROL         "RTS",IDC_RTSCheck,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    246,342,36,10
+    CONTROL         "DTR",IDC_DTRCheck,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    287,342,32,10
+    EDITTEXT        IDC_SEND,7,246,595,91,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    CONTROL         "",IDC_RECV,"RICHEDIT",ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | ES_WANTRETURN | WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,127,13,542,220
+    CONTROL         "",IDC_MSCOMM1,"{648A5600-2C6E-101B-82B6-000000000014}",
+                    NOT WS_VISIBLE | WS_TABSTOP,43,187,25,25
+    GROUPBOX        "串口配置",IDC_STATIC,7,7,105,168
+    LTEXT           "串口号：",IDC_STATIC,13,26,33,8,0,WS_EX_TRANSPARENT
+    LTEXT           "波特率：",IDC_STATIC,13,49,33,8,0,WS_EX_TRANSPARENT
+    LTEXT           "停止位：",IDC_STATIC,13,70,33,8,0,WS_EX_TRANSPARENT
+    LTEXT           "数据位：",IDC_STATIC,13,93,33,8,0,WS_EX_TRANSPARENT
+    LTEXT           "奇偶校验：",IDC_STATIC,13,117,41,8,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_STATUS,7,361,180,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    EDITTEXT        IDC_TIME,564,362,105,14,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    CONTROL         "保存日志",IDC_LOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    324,342,46,10
+    CONTROL         "Progress2",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | 
+                    WS_BORDER,371,362,169,14
+    EDITTEXT        IDC_LOGPATH,371,339,231,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    PUSHBUTTON      "打开文件",IDC_OPENFILE,611,338,50,14
+    PUSHBUTTON      "发送文件",IDC_SENDFILE,611,317,50,14
+    EDITTEXT        IDC_TX_SIZE,193,362,84,14,ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "0%",IDC_PRECENT,542,364,18,10,SS_SUNKEN
+    EDITTEXT        IDC_RX_SIZE,282,362,84,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "COMM Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "COMM\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2020\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "COMM.EXE\0"
+            VALUE "ProductName", "COMM 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_COMM_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 669
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 376
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_COMM_DIALOG DLGINIT
+BEGIN
+    IDC_BOUND, 0x403, 5, 0
+0x3231, 0x3030, "\000" 
+    IDC_BOUND, 0x403, 5, 0
+0x3432, 0x3030, "\000" 
+    IDC_BOUND, 0x403, 5, 0
+0x3834, 0x3030, "\000" 
+    IDC_BOUND, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    IDC_BOUND, 0x403, 6, 0
+0x3431, 0x3034, 0x0030, 
+    IDC_BOUND, 0x403, 6, 0
+0x3931, 0x3032, 0x0030, 
+    IDC_BOUND, 0x403, 6, 0
+0x3833, 0x3034, 0x0030, 
+    IDC_BOUND, 0x403, 6, 0
+0x3735, 0x3036, 0x0030, 
+    IDC_BOUND, 0x403, 7, 0
+0x3131, 0x3235, 0x3030, "\000" 
+    IDC_BOUND, 0x403, 7, 0
+0x3231, 0x3038, 0x3030, "\000" 
+    IDC_BOUND, 0x403, 7, 0
+0x3532, 0x3036, 0x3030, "\000" 
+    IDC_BOUND, 0x403, 7, 0
+0x3634, 0x3830, 0x3030, "\000" 
+    IDC_BOUND, 0x403, 7, 0
+0x3239, 0x3631, 0x3030, "\000" 
+    IDC_BOUND, 0x403, 8, 0
+0x3331, 0x3238, 0x3034, 0x0030, 
+    IDC_STOPBIT, 0x403, 2, 0
+0x0031, 
+    IDC_STOPBIT, 0x403, 4, 0
+0x2e31, 0x0035, 
+    IDC_STOPBIT, 0x403, 2, 0
+0x0032, 
+    IDC_DATABIT, 0x403, 2, 0
+0x0035, 
+    IDC_DATABIT, 0x403, 2, 0
+0x0036, 
+    IDC_DATABIT, 0x403, 2, 0
+0x0037, 
+    IDC_DATABIT, 0x403, 2, 0
+0x0038, 
+    IDC_CHECKBIT, 0x403, 3, 0
+0xdece, "\000" 
+    IDC_CHECKBIT, 0x403, 7, 0
+0xe6c6, 0xa3d0, 0xe9d1, "\000" 
+    IDC_CHECKBIT, 0x403, 7, 0
+0xbcc5, 0xa3d0, 0xe9d1, "\000" 
+    IDC_MSCOMM1, 0x376, 102, 0
+0x0013, 0x0000, 0x0043, 0x006f, 0x0070, 0x0079, 0x0072, 0x0069, 0x0067, 
+0x0068, 0x0074, 0x0020, 0x0028, 0x0063, 0x0029, 0x0020, 0x0031, 0x0039, 
+0x0039, 0x0034, 0x0020, 0x4321, 0x1234, 0x0008, 0x0000, 0x03ed, 0x0000, 
+0x03ed, 0x0000, 0x5601, 0x648a, 0x0000, 0x0006, 0x0000, 0x0001, 0x0400, 
+0x0000, 0x0200, 0x0000, 0xc200, 0x0001, 0x0000, 0x0008, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x003f, 0x0000, 0x0001, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "温馨提示"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\COMM.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
